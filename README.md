@@ -27,10 +27,10 @@ DeepSeek Harness puts every plugin panel entry in the sidebar. When you install 
 ## Install
 
 ```sh
-dsh plugin --profile <your-profile> add dsh-panel-compact
+dsh plugin --profile <your-profile> add github:yingqi-studio/dsh-panel-compact
 ```
 
-Published on npm as [`dsh-panel-compact`](https://www.npmjs.com/package/dsh-panel-compact). Installing from GitHub works too: `dsh plugin --profile <your-profile> add github:yingqi-studio/dsh-panel-compact`.
+Also staged on npm as [`dsh-panel-compact`](https://www.npmjs.com/package/dsh-panel-compact) — the first release is in npm's staged review, so until it is approved the npm entry only carries the `0.0.0-stage` placeholder. Use the GitHub install above in the meantime; then `dsh plugin --profile <your-profile> add dsh-panel-compact` works too.
 
 In DSH Desktop, open **Plugins**, search the name and install it there. **Restart the app** — a new bundle is composed into the profile tree at boot — and the sidebar comes back compact.
 
