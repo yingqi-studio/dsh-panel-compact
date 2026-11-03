@@ -1,0 +1,60 @@
+{
+  "name": "dsh-panel-compact",
+  "version": "0.1.0",
+  "private": false,
+  "type": "module",
+  "description": "Keep three plugin panels in the DSH sidebar, drag to reorder them, and collect the rest into a More menu.",
+  "icon": "icon.svg",
+  "license": "MIT",
+  "author": "yingqi-studio",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yingqi-studio/dsh-panel-compact.git"
+  },
+  "homepage": "https://github.com/yingqi-studio/dsh-panel-compact#readme",
+  "bugs": {
+    "url": "https://github.com/yingqi-studio/dsh-panel-compact/issues"
+  },
+  "keywords": [
+    "deepseek",
+    "harness",
+    "dsh",
+    "dsh-plugin",
+    "sidebar",
+    "panels",
+    "compact",
+    "drag-and-drop"
+  ],
+  "engines": {
+    "dsh": ">=0.2.0"
+  },
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./icon": "./icon.svg",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "index.js",
+    "client.js",
+    "cordis.patch.yml",
+    "icon.svg",
+    "README.md",
+    "LICENSE",
+    "docs"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "immediately": true,
+      "inject": [
+        "@deepseek-ai/dsh-client-locale",
+        "@deepseek-ai/dsh-client-ui-layout",
+        "@deepseek-ai/dsh-client-ui-sidebar"
+      ]
+    }
+  }
+}
